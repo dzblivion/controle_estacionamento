@@ -8,11 +8,12 @@
 .titulo{
     color: var(--malachite);
 
-    font-family: 'Satoshi Bold', sans-serif;
+    font-family: Satoshi B, sans-serif;
     font-size: 36px;
 }
 
 .texto {
+    font-family: Satoshi Regular, sans-serif;
     text-align: justify;
     color: var(--aqua-haze);
 }
