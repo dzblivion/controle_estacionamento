@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { Header } from "../../componentes/layout/header/header";
-import { Footer } from "../../componentes/layout/footer/footer";
+import { SobrenosComponents } from "../../componentes/sobrenos-components/sobrenos-components";
 
 @Component({
   selector: 'app-sobre-nos',
-  imports: [Header, Footer],
-  templateUrl: './sobre-nos.html',
+  imports: [SobrenosComponents],
+templateUrl: './sobre-nos.html',
   styleUrl: './sobre-nos.css',
 })
 export class SobreNos {
