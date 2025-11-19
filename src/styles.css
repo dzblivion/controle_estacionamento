@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --malachite: #03D26F;
+    --cyprus: #014651;
+    --aqua-haze: #EAF4F4;
+    --starship: #CEF431;
+    --cod-gray: #161514;
+}
+
+@font-face {
+    font-family: Satoshi Regular;
+    src: url(assets/fonts/Satoshi-Regular.otf) format("otf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Satoshi Medium;
+    src: url(assets/fonts/Satoshi-Medium.otf) format("otf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Satoshi Bold;
+    src: url(assets/fonts/Satoshi-Bold.otf) format("otf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Satoshi Black;
+    src: url(assets/fonts/Satoshi-Black.otf) format(otf);
+}
+
+@font-face {
+    font-family: Satoshi Italic;
+    src: url(assets/fonts/Satoshi-Italic.otf) format("otf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Satoshi Light;
+    src: url(assets/fonts/Satoshi-Light.otf) format("otf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: South;
+    src: url(assets/fonts/South.otf);
+}
