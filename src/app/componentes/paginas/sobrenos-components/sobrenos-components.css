@@ -1,0 +1,24 @@
+.conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo{
+    color: var(--malachite);
+
+    font-family: Satoshi B, sans-serif;
+    font-size: 36px;
+}
+
+.texto {
+    font-family: Satoshi Regular, sans-serif;
+    text-align: justify;
+    color: var(--aqua-haze);
+}
+
+main {
+    padding: 20px;
+    background-color: var(--cod-gray);
+}
