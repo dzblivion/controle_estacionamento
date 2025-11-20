@@ -1,0 +1,32 @@
+.conteudo{
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cod-gray);
+    height: 100px;
+    justify-content: space-between;
+}
+.logo{
+    padding-left: 50px;
+    font-family: South;
+    color: var(--starship);
+}
+nav > a{
+    font-family: Satoshi B;
+    font-weight: bold;
+    color: var(--starship);
+    text-decoration: none;
+}
+a{
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 2px solid var(--starship);
+}
+.final{
+    border-right: none;
+}
+.nav{
+    padding-right: 50px;
+}

@@ -1,0 +1,71 @@
+.starship{
+    padding: 100px;
+    min-height: 200px;
+    max-height: 400px;
+    background-color: var(--starship);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.logo{
+    font-family: South;
+}
+.col-1 > h1{
+    font-size: 50px;
+}
+col-1 > p{
+    font-family: Satoshi Medium;
+    font-weight: 500;
+}
+.col-2 > p{
+    text-align: justify;
+    font-size: 11px;
+    line-height: auto;
+    max-width: 229px;
+}
+h1{
+    font-family: Satoshi B;
+    font-weight: bold;
+}
+p{
+    font-family: Satoshi Regular;
+    font-weight: 400;
+}
+col-4{
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: inline-flexbox;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: #bdde31;
+}
+input{
+    border-style: none;
+    height: 40px;
+    border-radius: 15px;
+}
+
+input::placeholder{
+    padding-left: 20px;
+}
+button{
+    background-color: var(--cod-gray);
+    border-style: none;
+    text-align: center;
+    color: var(--starship);
+    width: 130px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.codgray{
+    color: var(--starship);
+    background-color: var(--cod-gray);
+    text-align: center;
+}

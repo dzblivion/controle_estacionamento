@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
     --malachite: #03D26F;
     --cyprus: #014651;
@@ -9,20 +14,20 @@
 
 @font-face {
     font-family: Satoshi Regular;
-    src: url(assets/fonts/Satoshi-Regular.otf) format("otf");
+    src: url(assets/fonts/Satoshi-Regular.otf);
     font-weight: 400;
 }
 
 @font-face {
     font-family: Satoshi Medium;
-    src: url(assets/fonts/Satoshi-Medium.otf) format("otf");
+    src: url(assets/fonts/Satoshi-Medium.otf);
     font-weight: 500;
 }
 
 @font-face {
-    font-family: Satoshi Bold;
-    src: url(assets/fonts/Satoshi-Bold.otf) format("otf");
-    font-weight: 700;
+    font-family: Satoshi B;
+    src: url(assets/fonts/Satoshi-Bold.otf);
+    font-weight: bold;
 }
 
 @font-face {
