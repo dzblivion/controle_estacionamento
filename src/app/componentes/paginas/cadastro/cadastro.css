@@ -58,10 +58,18 @@ form{
 
 #area-capa{
     /* border: 1px solid green; */
-    padding: 5px;
     display: flex;
     width: 100%;
-    justify-content: end;
+    max-height: 620px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow-x: hidden;
+}
+
+#area-capa img{
+    display: flex;
+    width: 100%;
+    object-fit: cover;
 }
 
 button:disabled{
