@@ -10,6 +10,8 @@
     --aqua-haze: #EAF4F4;
     --starship: #CEF431;
     --cod-gray: #161514;
+    --gray: #414241;
+    --gray-50: #535353;
 }
 
 @font-face {
@@ -31,7 +33,7 @@
 }
 
 @font-face {
-    font-family: Satoshi Black;
+    font-family: Satoshi;
     src: url(assets/fonts/Satoshi-Black.otf) format(otf);
 }
 
@@ -50,4 +52,25 @@
 @font-face {
     font-family: South;
     src: url(assets/fonts/South.otf);
+}
+
+.titulo{
+    color: var(--starship);
+    font-family: Satoshi Regular;
+    font-weight: 800;
+    font-size: clamp(2vw, 2.5vw, 3vw);
+}
+
+.area-img{
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.area-img img{
+    display: flex;
+    width: 100%;
+    object-fit: cover;
 }

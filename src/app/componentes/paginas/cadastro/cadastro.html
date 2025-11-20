@@ -1,0 +1,52 @@
+<section id="home">
+    <div id="area-cadastro">
+        <form [formGroup]="cadastro" (ngSubmit)="submit()">
+            <h1 class="titulo">Cadastro</h1>
+            <div class="area-input">
+                <label for="">Nome:</label>
+                <input type="text" formControlName="nome" id="nome" required>
+                @if (cadastro.get('nome')?.hasError('required') && cadastro.get('nome')?.touched) {
+                    <div class="alert alert-warning">
+                        <p>O campo 'Nome' é obrigatório.</p>
+                    </div>
+                }
+            </div>
+            <div class="area-input">
+                <label for="">E-mail:</label>
+                <input type="email" formControlName="email" id="email" required>
+                @if (cadastro.get('email')?.hasError('required') && cadastro.get('email')?.touched) {
+                    <div class="alert alert-warning">
+                        <p>O campo 'E-mail' é obrigatório.</p>
+                    </div>
+                } @else if (cadastro.get('email')?.hasError('email') && cadastro.get('email')?.touched) {
+                    <div class="alert alert-warning">
+                        <p>Tipo de Email inválido!</p>
+                    </div>
+                }
+            </div>
+                <div class="area-input">
+                    <label for="">Telefone</label>
+                    <input type="tel"  formControlName="telefone" id="telefone" required>
+                    @if (cadastro.get('telefone')?.hasError('required') && cadastro.get('telefone')?.touched) {
+                        <div class="alert alert-warning">
+                            <p>O campo 'Telefone' é obrigatório.</p>
+                        </div>
+                    }
+                    @else if (cadastro.get('telefone')?.hasError('pattern') && cadastro.get('telefone')?.touched){
+                        <div class="alert alert-warning">
+                            <p>entrada inválida!</p>
+                            <p>EX: (XX) XXXXXXXXX ou (XX) XXXXX-XXXX</p>
+                        </div>
+                    }
+                </div>
+            <div class="area-input">
+                <button type="submit" [disabled]="cadastro.invalid">cadastrar</button>
+            </div>
+        </form>
+    </div>
+    <div id="area-capa">
+        <div class="area-img">
+            <img src="/imagens/capa/capa-home.png" alt="">
+        </div>
+    </div>
+</section>

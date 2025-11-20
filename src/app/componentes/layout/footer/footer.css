@@ -24,6 +24,14 @@ col-1 > p{
     line-height: auto;
     max-width: 229px;
 }
+.col-3{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+}
 h1{
     font-family: Satoshi B;
     font-weight: bold;
@@ -32,12 +40,13 @@ p{
     font-family: Satoshi Regular;
     font-weight: 400;
 }
-col-4{
+.col-4{
     justify-content: center;
     align-items: center;
 }
-form{
-    display: inline-flexbox;
+.col-4 form{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
