@@ -1,4 +1,3 @@
-import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
@@ -6,7 +5,6 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   selector: 'app-cadastro',
   imports: [
     ReactiveFormsModule,
-    NgClass
   ],
   templateUrl: './cadastro.html',
   styleUrl: './cadastro.css',
