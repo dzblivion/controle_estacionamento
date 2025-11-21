@@ -1,6 +1,4 @@
-.conteudo{
-
-    
+.conteudo{    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,11 +6,13 @@
     height: 100px;
     justify-content: space-between;
 }
+
 .logo{
     padding-left: 50px;
     font-family: South;
     color: var(--starship);
 }
+
 nav > a{
     font-family: Satoshi B;
     font-weight: bold;
