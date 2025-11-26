@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ApiService } from '../../../services/api';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-cadastro',
@@ -26,12 +27,19 @@ export class Cadastro {
 
   submit() {
     if (this.cadastro.valid) {
-      alert('enviando...');
       const dados = this.cadastro.value;
 
       this.api.cadastrarUsuario(dados).subscribe({
-        next: (res: any) => alert("Usuário cadastrado: " + JSON.stringify(res)),
-        error: (err: any) => alert("Erro: " + JSON.stringify(err)),
+        next: (res: any) => {
+          if(res.status === "ok"){
+            alert('Usuário cadastrado com sucesso!');
+          }else if(res.status.includes("erro")){
+            alert("Erro do servidor: " + res.status);
+          }else{
+            alert("Resposta inesperada: " +JSON.stringify(res));
+          }
+        },
+        error: (err: any) => alert("Falha na comunicação com o servidor: " + console.error(err)),
       });
     }
   }
