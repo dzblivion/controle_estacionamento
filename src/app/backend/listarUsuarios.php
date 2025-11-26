@@ -4,6 +4,7 @@
     header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
     header("Content-Type: application/json");
 
+    if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') exit;
 
     include_once "./conexao.php";
 
