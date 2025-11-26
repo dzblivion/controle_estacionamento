@@ -33,6 +33,7 @@ export class Cadastro {
         next: (res: any) => {
           if(res.status === "ok"){
             alert('Usuário cadastrado com sucesso!');
+            this.cadastro.reset();
           }else if(res.status.includes("erro")){
             alert("Erro do servidor: " + res.status);
           }else{

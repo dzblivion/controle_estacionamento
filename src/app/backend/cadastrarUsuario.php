@@ -19,9 +19,13 @@
     if($resultado->num_rows > 0){
         echo json_encode(["status" => "erro: Usuário já existe"]);
     }else{
+        $senha = $dados['senha'];
+        $senhaProtegida = password_hash($senha, PASSWORD_DEFAULT);
+
         $stmt->close();
         $stmt = $mysqli->prepare("INSERT INTO usuarios (nomeUsuario, emailUsuario, categoriaUsuario, senhaUsuario) VALUES (?, ?, ?, ?)");
-        $stmt->execute([$dados["nome"], $dados['email'], $dados["categoria"], $dados["senha"]]);
+        $stmt->bind_param("ssss", $dados['nome'], $dados['email'], $dados['categoria'], $senhaProtegida);
+        $stmt->execute();
         echo json_encode(["status" => "ok"]);
     }
 
