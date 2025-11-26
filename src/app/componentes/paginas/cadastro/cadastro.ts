@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ApiService } from '../../../services/api';
 
 @Component({
   selector: 'app-cadastro',
@@ -10,39 +11,43 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './cadastro.css',
 })
 export class Cadastro {
-
+  
+  senhasDiferentes:boolean = false;
+  
+  constructor(private api: ApiService) {}
+  
   cadastro = new FormGroup({
-      nome : new FormControl('', Validators.required),
-      email : new FormControl('', [Validators.required, Validators.email]),
-      telefone : new FormControl<string>('', [Validators.required, Validators.pattern(/^\(\d{2}\)\s\d{4,5}-?\d{4}$/)])
+    nome: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    categoria: new FormControl('', Validators.required),
+    senha: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    confirmaSenha: new FormControl('', Validators.required)
+  });
 
-    });
+  submit() {
+    if (this.cadastro.valid) {
+      alert('enviando...');
+      const dados = this.cadastro.value;
 
-    submit(){
-      if(this.cadastro.valid){
-        alert("cadastro efetuado para:" + " \n" + "______________________\n" + this.cadastro.value.nome + "\n" + this.cadastro.value.email + "\n" + this.cadastro.value.telefone + "\n______________________\n" + "\n Enviar para o banco de dados!");
-      }
+      this.api.cadastrarUsuario(dados).subscribe({
+        next: (res: any) => alert("Usuário cadastrado: " + JSON.stringify(res)),
+        error: (err: any) => alert("Erro: " + JSON.stringify(err)),
+      });
+    }
+  }
+
+  verificarSenhas(){
+    
+    let senha1 = this.cadastro.value.senha;
+    let senha2 = this.cadastro.value.confirmaSenha;
+
+    if(senha1 === senha2){
+      this.senhasDiferentes = false;
+      this.submit();
+    }else{
+      this.senhasDiferentes = true;
     }
 
-    formatar() {
-    const control = this.cadastro.get('telefone');
-    let valor = control?.value || '';
-    valor = valor.replace(/\D/g, '');
-
-    valor = valor.substring(0, 11);
-
-    if (valor.length > 6) {
-      // (XX) XXXXX-XXXX
-      valor = valor.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-    } else if (valor.length > 2) {
-      // (XX) XXXXX
-      valor = valor.replace(/(\d{2})(\d+)/, '($1) $2');
-    } else if (valor.length > 0) {
-      // (XX
-      valor = valor.replace(/(\d{0,2})/, '($1');
-    }
-
-    control?.setValue(valor, { emitEvent: false });
   }
 
 }
