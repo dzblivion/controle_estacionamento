@@ -1,8 +1,9 @@
 .starship{
+    /* border: 1px solid red; */
     padding: 50px 0px;
     background-color: var(--starship);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 h2{
     font-family: Satoshi B;
@@ -15,11 +16,11 @@ p{
 .col-1, .col-2, .col-3, .col-4{
     /* border: 1px solid red; */
     margin: 0px 50px 0px 50px;
-    width: 25%;
-    font-optical-sizing: auto;
+    /* width: 100%; */
 }
 .col-3, .col-4{
     text-align: center;
+    margin: 0;
 }
 h1{
     font-family: South;
