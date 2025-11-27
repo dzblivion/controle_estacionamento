@@ -1,5 +1,4 @@
-
-#cadastro{
+#login{
     /* border: 1px solid red; */
     padding: 50px 0;
     display: flex;
@@ -8,12 +7,13 @@
     background-color: var(--cod-gray);
 }
 
-#area-cadastro{
+#area-login{
     /* border: 1px solid blue; */
     padding: 5px;
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-height: 700px;
     justify-content: center;
     align-items: center;
 
