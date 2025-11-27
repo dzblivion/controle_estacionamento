@@ -50,10 +50,15 @@ export class Cadastro {
     let senha1 = this.cadastro.value.senha;
     let senha2 = this.cadastro.value.confirmaSenha;
 
-    if(senha1 === senha2){
+    if(senha2 === senha1){
       this.senhasDiferentes = false;
-      this.submit();
+      this.cadastro.get('confirmaSenha')?.setErrors({invalid:false});
+      if(this.cadastro.valid){
+        this.submit();
+      }
+
     }else{
+      this.cadastro.get('confirmaSenha')?.setErrors({invalid:true});
       this.senhasDiferentes = true;
     }
 

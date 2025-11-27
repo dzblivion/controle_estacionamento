@@ -60,7 +60,7 @@
 
             <div class="area-input">
                 <label for="confirmaSenha">Confirme a senha:</label>
-                <input type="password" formControlName="confirmaSenha" id="confirmaSenha" required  maxlength="25">
+                <input type="password" formControlName="confirmaSenha" id="confirmaSenha" required  maxlength="25" (input)="verificarSenhas()">
 
                 @if(senhasDiferentes){
                     <div class="alert alert-danger">
@@ -76,7 +76,7 @@
 
 
             <div class="area-input">
-                <button type="submit" >cadastrar</button>
+                <button type="submit" [disabled]="cadastro.invalid">cadastrar</button>
             </div>
         </form>
     </div>
