@@ -78,13 +78,6 @@ button{
     cursor: pointer;
     border-radius: 0px 10px 10px 0px;
 }
-@media screen and (max-width: 1400px){
-    .col-1, .col-2, .col-3, .col-4{
-        width: 90%;
-        margin-left: 5%;
-    }
-    
-}
 @media screen and (max-width: 1200px){
     footer{
         justify-content: center;
