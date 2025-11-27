@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ɵInternalFormsSharedModule, ReactiveFormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-login',
-  imports: [],
+  imports: [ɵInternalFormsSharedModule, ReactiveFormsModule],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
