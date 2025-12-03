@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SobrenosComponents } from '../../componentes/paginas/sobrenos-components/sobrenos-components';
+import { SobrenosComponents } from '../../componentes/sobrenos-components/sobrenos-components';
 
 @Component({
   selector: 'app-sobre-nos',
