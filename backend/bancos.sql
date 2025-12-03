@@ -11,5 +11,3 @@ CREATE TABLE usuarios (
     senhaUsuario VARCHAR(255) NOT NULL,
     dataCriacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-EXIT;
