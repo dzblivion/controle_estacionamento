@@ -11,6 +11,8 @@
     padding-left: 50px;
     font-family: South;
     color: var(--starship);
+    font-size: 40px;
+    text-decoration: none;
 }
 
 nav > a{
@@ -30,3 +32,21 @@ a{
 .nav{
     padding-right: 50px;
 }
+
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: var(--starship);
+    margin: 0;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    gap: 10px;
+    transition: 0.3s;
+
+    }

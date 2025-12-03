@@ -103,3 +103,44 @@ button:hover{
     cursor: pointer;
 }
 
+/* Estilo Base para Input e Select */
+.area-input input,
+.area-input select {
+    background-color: transparent;
+    border: 1px solid var(--aqua-haze);
+    width: 100%;
+    border-radius: 30px;
+    color: var(--aqua-haze);
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.area-input input:focus,
+.area-input select:focus {
+    border-color: var(--starship);
+    /* Fica verde limão ao clicar */
+    box-shadow: 0 0 8px rgba(206, 244, 49, 0.3);
+    /* Um brilho suave */
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Leve fundo para destacar */
+}
+
+/* Placeholder (O texto de ajuda antes de digitar) */
+::placeholder {
+    color: rgba(234, 244, 244, 0.5);
+    /* var(--aqua-haze) com transparência */
+}
+
+/* Correção para as OPÇÕES do Select (Geralmente bugam em fundo escuro) */
+.area-input select option {
+    background-color: var(--cod-gray);
+    /* Fundo escuro para o dropdown */
+    color: var(--starship);
+    /* Texto claro */
+}
