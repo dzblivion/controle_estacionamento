@@ -18,7 +18,15 @@
         exit;
     }
 
-    $stmt = $mysqli->prepare("SELECT idUsuario, nomeUsuario, emailUsuario, categoriaUsuario, senhaUsuario FROM usuarios WHERE emailUsuario = ?");
+    /**
+     *  `idUsuario` int NOT NULL AUTO_INCREMENT,
+  `nomeUsuario` varchar(45) NOT NULL,
+  `emailUsuario` varchar(50) NOT NULL,
+  `categoriaUsuario` varchar(45) DEFAULT NULL,
+  `statusUsuario` varchar(45) DEFAULT NULL,
+  `senhaUsuario` varchar(255) NOT NULL,
+     */
+    $stmt = $mysqli->prepare("SELECT idUsuario, nomeUsuario, emailUsuario, categoriaUsuario, statusUsuario, senhaUsuario FROM usuarios WHERE emailUsuario = ?");
     $stmt->bind_param("s", $dados['email']);
     $stmt->execute();
 
