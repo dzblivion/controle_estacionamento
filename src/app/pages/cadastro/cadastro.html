@@ -7,9 +7,9 @@
                 <label for="nome">Nome:</label>
                 <input type="text" formControlName="nome" id="nome" required>
                 @if (cadastro.get('nome')?.hasError('required') && cadastro.get('nome')?.touched) {
-                    <div class="alert alert-danger">
-                        <p>O campo 'Nome' é obrigatório.</p>
-                    </div>
+                <div class="alert alert-danger">
+                    <p>O campo 'Nome' é obrigatório.</p>
+                </div>
                 }
             </div>
 
@@ -17,13 +17,13 @@
                 <label for="email">E-mail:</label>
                 <input type="email" formControlName="email" id="email" required>
                 @if (cadastro.get('email')?.hasError('required') && cadastro.get('email')?.touched) {
-                    <div class="alert alert-danger">
-                        <p>O campo 'E-mail' é obrigatório.</p>
-                    </div>
+                <div class="alert alert-danger">
+                    <p>O campo 'E-mail' é obrigatório.</p>
+                </div>
                 } @else if (cadastro.get('email')?.hasError('email') && cadastro.get('email')?.touched) {
-                    <div class="alert alert-danger">
-                        <p>Tipo de Email inválido!</p>
-                    </div>
+                <div class="alert alert-danger">
+                    <p>Tipo de Email inválido!</p>
+                </div>
                 }
             </div>
 
@@ -33,43 +33,43 @@
                     <option value="">Selecione</option>
                     <option value="Funcionario">Funcionário</option>
                     <option value="Aluno">Aluno</option>
-                    <option value="Visitante">Visitante</option>
                 </select>
                 @if (cadastro.get('categoria')?.hasError('required') && cadastro.get('categoria')?.touched) {
-                    <div class="alert alert-danger">
-                        <p>O campo 'Categoria' é obrigatório.</p>
-                    </div>
+                <div class="alert alert-danger">
+                    <p>O campo 'Categoria' é obrigatório.</p>
+                </div>
                 }
             </div>
 
             <div class="area-input">
                 <label for="senha">Senha:</label>
-                <input type="password" formControlName="senha" id="senha" required  minlength="5" maxlength="25">
+                <input type="password" formControlName="senha" id="senha" required minlength="5" maxlength="25">
                 @if (cadastro.get('senha')?.hasError('required') && cadastro.get('senha')?.touched) {
-                    <div class="alert alert-danger">
-                        <p>O campo 'Senha' é obrigatório.</p>
-                    </div>
+                <div class="alert alert-danger">
+                    <p>O campo 'Senha' é obrigatório.</p>
+                </div>
                 }
                 @if(cadastro.get('senha')?.hasError('minlength') && cadastro.get('senha')?.touched){
-                    <div class="alert alert-danger">
-                        <p>Valor mínimo para 'Senha' é de 5 caracteres.</p>
-                    </div>
+                <div class="alert alert-danger">
+                    <p>Valor mínimo para 'Senha' é de 5 caracteres.</p>
+                </div>
                 }
             </div>
 
             <div class="area-input">
                 <label for="confirmaSenha">Confirme a senha:</label>
-                <input type="password" formControlName="confirmaSenha" id="confirmaSenha" required  maxlength="25" (input)="verificarSenhas()">
+                <input type="password" formControlName="confirmaSenha" id="confirmaSenha" required maxlength="25"
+                    (input)="verificarSenhas()">
 
                 @if(senhasDiferentes){
-                    <div class="alert alert-danger">
-                        <p>As senhas digitadas não coincidem!</p>
-                    </div>
+                <div class="alert alert-danger">
+                    <p>As senhas digitadas não coincidem!</p>
+                </div>
                 }
                 @if (cadastro.get('confirmaSenha')?.hasError('required') && cadastro.get('confirmaSenha')?.touched){
-                    <div class="alert alert-danger">
-                        <p>O campo de 'Confirme a senha' é obrigatório</p>
-                    </div>
+                <div class="alert alert-danger">
+                    <p>O campo de 'Confirme a senha' é obrigatório</p>
+                </div>
                 }
             </div>
 
@@ -79,7 +79,7 @@
             </div>
         </form>
     </div>
-    
+
     <div id="area-capa" data-aos="fade-left" data-aos-delay="500">
         <img src="/imagens/capa/capa-home.png" alt="">
     </div>

@@ -1,12 +1,12 @@
 <?php
-    $hostname = 'localhost';
-    $dbname = 'estacionamento';
-    $user = 'root';
-    $pass = 'Dwdbrasiloficial12!';
+$hostname = 'localhost';
+$dbname = 'estacionamento';
+$user = 'root';
+$pass = '@washesk1ll';
 
-    $mysqli = new mysqli($hostname, $user, $pass, $dbname);
+$mysqli = new mysqli($hostname, $user, $pass, $dbname);
 
-    if($mysqli->connect_errno){
-        echo "Falha ao conectar ao banco: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-    }
+if ($mysqli->connect_errno) {
+    echo "Falha ao conectar ao banco: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
 ?>
