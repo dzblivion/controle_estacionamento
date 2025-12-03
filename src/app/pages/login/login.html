@@ -1,6 +1,6 @@
 <section id="login">
     <div id="area-login">
-        <form >
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
             <h1 class="titulo">Entrar</h1>
 
             <div class="area-input">
@@ -9,12 +9,12 @@
             </div>
             
             <div class="area-input">
-                <label for="nome">Senha:</label>
+                <label for="senha">Senha:</label>
                 <input type="password" formControlName="senha" id="senha" required>
             </div>
 
             <div class="area-input">
-                <button type="submit" >Entrar</button>
+                <button type="submit">Entrar</button>
             </div>
         </form>
     </div>

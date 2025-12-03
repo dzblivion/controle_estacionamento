@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { SobreNos } from './pages/sobre-nos/sobre-nos';
-import { Cadastro } from './componentes/paginas/cadastro/cadastro';
-import { Login } from './componentes/paginas/login/login';
+import { Cadastro } from './pages/cadastro/cadastro';
+import { Login } from './pages/login/login';
 
 
 export const routes: Routes = [
