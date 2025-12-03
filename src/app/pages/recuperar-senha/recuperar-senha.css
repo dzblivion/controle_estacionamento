@@ -1,0 +1,121 @@
+h1{
+    color: var(--starship);
+}
+
+#recuperar{
+    /* border: 1px solid red; */
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cod-gray);
+}
+
+#area-recuperar{
+    /* border: 1px solid blue; */
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 700px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form{
+    /* border: 1px solid yellow; */
+    padding: 70px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--gray);
+    border-radius: 25px;
+}
+
+.area-input{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+}
+
+.area-input label{
+    color: white;
+}
+
+.area-input input{
+    background-color: transparent;
+    border: 1px solid white;
+    width: 100%;
+    border-radius: 30px;
+    color: white;
+    padding: 5px 15px;
+}
+
+button:disabled{
+    border: 1px solid var(--aqua-haze);
+    border-radius: 25px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    color: var(--aqua-haze);
+    background-color: transparent !important;
+    cursor: no-drop !important;
+}
+
+button{
+    border: 1px solid var(--starship);
+    border-radius: 25px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    color: var(--starship);
+    background-color: var(--gray);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--gray-50);
+    cursor: pointer;
+}
+
+.area-input input,
+.area-input select {
+    background-color: transparent;
+    border: 1px solid var(--aqua-haze);
+    width: 100%;
+    border-radius: 30px;
+    color: var(--aqua-haze);
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.area-input input:focus,
+.area-input select:focus {
+    border-color: var(--starship);
+    box-shadow: 0 0 8px rgba(206, 244, 49, 0.3);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+::placeholder {
+    color: rgba(234, 244, 244, 0.5);
+}
+
+.area-input select option {
+    background-color: var(--cod-gray);
+    color: var(--starship);
+}
